@@ -2,7 +2,7 @@ package me.waleks.simplematerialgenerators;
 
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import javax.annotation.Nonnull;
@@ -18,8 +18,8 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
 
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "Sefiraat/SMG/master").start();
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build ")) {
+            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "SMG", "master", false).start();
         }
 
         SMGItemSetup.setup(this);
@@ -33,7 +33,7 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
     @Nonnull
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/Sefiraat/SMG/issues";
+        return "https://github.com/SlimefunGuguProject/SMG/issues";
     }
 
     @Nonnull

@@ -19,7 +19,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
         super(itemGroup, item, RecipeType.MULTIBLOCK, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(Material.CHEST), null,
-                null, new CustomItemStack(Material.BEDROCK, "Any SMG generator"), null
+                null, new CustomItemStack(Material.BEDROCK, "任何材料生成器"), null
         });
     }
 
@@ -28,7 +28,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
     public ItemUseHandler getItemHandler() {
         return e -> {
             e.cancel();
-            e.getPlayer().sendMessage("Psst, this Item is just a dummy. You need to place the actual generator down.");
+            e.getPlayer().sendMessage("这只是一个示例物品，你需要按照配方所示，在世界中摆放材料生成器");
         };
     }
 }
