@@ -81,4 +81,3 @@ public class MaterialGenerator extends SlimefunItem {
         return this;
     }
 }
-
