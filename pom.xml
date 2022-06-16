@@ -73,13 +73,15 @@
                 </includes>
             </resource>
         </resources>
+
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.3.0</version>
 
                 <configuration>
+                    <minimizeJar>true</minimizeJar>
                     <relocations>
                         <relocation>
                             <pattern>net.guizhanss.guizhanlib</pattern>
@@ -87,10 +89,24 @@
                         </relocation>
                     </relocations>
                     <filters>
-                        <!-- No point including the entire CS-CoreLib2 so let's only include the needed files -->
-                        <include>**/thebusybiscuit/cscorelib2/blocks/**</include>
+                        <filter>
+                            <artifact>*:*</artifact>
+                            <excludes>
+                                <exclude>META-INF/*</exclude>
+                                <exclude>minecraft.*.json</exclude>
+                            </excludes>
+                        </filter>
                     </filters>
                 </configuration>
+
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
