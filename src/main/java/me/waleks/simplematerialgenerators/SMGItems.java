@@ -40,7 +40,7 @@ public final class SMGItems {
         "SMG_GENERATOR_COBBLESTONE",
         Material.COBBLESTONE,
         "&7圆石生成器",
-        "&速度: &e4 t",
+        "&6速度: &e4 t",
         "",
         "&9&o简易材料生成器"
     );
