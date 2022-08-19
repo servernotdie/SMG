@@ -129,7 +129,7 @@ public final class SMGItems {
     public static final SlimefunItemStack SMG_GENERATOR_NETHERRACK = new SlimefunItemStack(
         "SMG_GENERATOR_NETHERRACK",
         Material.NETHERRACK,
-        "&c远古残骸生成器",
+        "&c下界岩生成器",
         "&6速度: &e6 t",
         "",
         "&9&o简易材料生成器"
