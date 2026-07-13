@@ -19,7 +19,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
         super(itemGroup, item, RecipeType.MULTIBLOCK, new ItemStack[] {
                 null, null, null,
                 null, new ItemStack(Material.CHEST), null,
-                null, new CustomItemStack(Material.BEDROCK, "任何材料生成器"), null
+                null, new CustomItemStack(Material.BEDROCK, "Máy tạo vật liệu bất kỳ"), null
         });
     }
 
@@ -28,7 +28,7 @@ public class GeneratorMultiblock extends SimpleSlimefunItem<ItemUseHandler> impl
     public ItemUseHandler getItemHandler() {
         return e -> {
             e.cancel();
-            e.getPlayer().sendMessage("这只是一个示例物品，你需要按照配方所示，在世界中摆放材料生成器");
+            e.getPlayer().sendMessage("Đây chỉ là vật phẩm mẫu, bạn cần đặt máy tạo vật liệu trong thế giới theo như công thức chỉ ra");
         };
     }
 }

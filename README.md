@@ -1,12 +1,12 @@
-# SimpleMaterialGenerators - SMG - 简易材料生成器
+# SimpleMaterialGenerators - SMG - Máy tạo vật liệu đơn giản
 
-SMG 是一个 Slimefun 附属插件，可以省去一些跑图寻找物品的过程，来通过材料生成器获取这些物品。
+SMG là một plugin phụ trợ cho Slimefun, giúp tiết kiệm quá trình chạy đồ tìm kiếm vật phẩm, để có thể nhận được những vật phẩm này thông qua máy tạo vật liệu.
 
-## 下载
+## Tải xuống
 
-**自动更新**: 汉化版构建#1及以上版本包含自动更新功能，默认开启。
+**Tự động cập nhật**: Bản dịch #1 trở lên bao gồm tính năng tự động cập nhật, mặc định bật.
 
-点击这里下载 SMG: [下载 SMG](https://builds.guizhanss.net/SlimefunGuguProject/SMG/master)
+Nhấp vào đây để tải SMG: [Tải SMG](https://builds.guizhanss.net/SlimefunGuguProject/SMG/master)
 
 <p align="center">
   <a href="https://github.com/SlimefunGuguProject/SMG/actions/workflows/maven.yml">
@@ -17,25 +17,34 @@ SMG 是一个 Slimefun 附属插件，可以省去一些跑图寻找物品的过
   </a>
 </p>
 
-## 使用
+## Sử dụng
 
-生成器需要在上方放置一个箱子才能工作，这属于多方块结构。
+Máy tạo cần đặt một cái rương phía trên để hoạt động, đây là cấu trúc đa khối.
 
-然后，生成器就会不断生产物品，不需要任何其他操作。
+Sau đó, máy tạo sẽ liên tục sản xuất vật phẩm mà không cần bất kỳ thao tác nào khác.
 
-生成器的**速度**单位是 Slimefun Tick, 在默认情况下，1 t = 0.5 s
+Đơn vị **tốc độ** của máy tạo là Slimefun Tick, mặc định 1 t = 0.5 s
 
-## 可用的生成器
+## Các máy tạo có sẵn
 
-目前有以下物品的生成器:
+Hiện có các máy tạo cho những vật phẩm sau:
 
-- 圆石
-- 石头
-- 平滑石头
-- 沙砾
-- 沙子
-- 玻璃
-- 下界岩
-- 灵魂沙
+- Đá cuội
+- Đá
+- Đá mịn
+- Sỏi
+- Cát
+- Kính
+- Địa ngục thạch
+- Cát linh hồn
 
-后续可能会添加更多。
+Sau này có thể sẽ bổ sung thêm.
+
+## Này bản fork từ upstream của nhóm dev người TQ xong dịch :D ờ có công tui patch hỗ trợ folia nữa :D 
+
+- Mà mấy đường link tải trực tiếp trên readme này tại tui lười chỉnh với muốn ghi công của họ , khuyên nên tải từ release.
+- Có thể bản dịch không đúng lắm mong thông cảm dùm.
+
+Credit: 
+---
+[SlimefunGuguProject](https://github.com/SlimefunGuguProject/SMG)

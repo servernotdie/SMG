@@ -1,14 +1,13 @@
 package me.waleks.simplematerialgenerators.items;
 
+import com.xzavier0722.mc.plugin.slimefun4.storage.controller.SlimefunBlockData;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun4.api.items.ItemSetting;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.items.settings.IntRangeSetting;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.blocks.BlockPosition;
 import io.github.thebusybiscuit.slimefun4.libraries.paperlib.PaperLib;
-import me.mrCookieSlime.CSCoreLibPlugin.Configuration.Config;
 import me.mrCookieSlime.Slimefun.Objects.handlers.BlockTicker;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -20,12 +19,10 @@ import org.bukkit.inventory.ItemStack;
 
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
-import java.util.HashMap;
-import java.util.Map;
 
 public class MaterialGenerator extends SlimefunItem {
 
-    private static final Map<BlockPosition, Integer> generatorProgress = new HashMap<>();
+    private static final String PROGRESS_KEY = "smg-progress";
 
     private final ItemSetting<Integer> rate;
     private ItemStack item;
@@ -43,8 +40,8 @@ public class MaterialGenerator extends SlimefunItem {
 
             @Override
             @ParametersAreNonnullByDefault
-            public void tick(Block b, SlimefunItem sf, Config data) {
-                MaterialGenerator.this.tick(b);
+            public void tick(Block b, SlimefunItem sf, SlimefunBlockData data) {
+                MaterialGenerator.this.tick(b, data);
             }
 
             @Override
@@ -54,15 +51,14 @@ public class MaterialGenerator extends SlimefunItem {
         });
     }
 
-    public void tick(@Nonnull Block b) {
+    public void tick(@Nonnull Block b, @Nonnull SlimefunBlockData data) {
         Block targetBlock = b.getRelative(BlockFace.UP);
         if (targetBlock.getType() == Material.CHEST) {
             BlockState state = PaperLib.getBlockState(targetBlock, false).getState();
             if (state instanceof InventoryHolder) {
                 Inventory inv = ((InventoryHolder) state).getInventory();
                 if (inv.firstEmpty() != -1) {
-                    final BlockPosition pos = new BlockPosition(b);
-                    int progress = generatorProgress.getOrDefault(pos, 0);
+                    int progress = parseProgress(data.getData(PROGRESS_KEY));
 
                     if (progress >= this.rate.getValue()) {
                         progress = 0;
@@ -70,9 +66,21 @@ public class MaterialGenerator extends SlimefunItem {
                     } else {
                         progress++;
                     }
-                    generatorProgress.put(pos, progress);
+                    data.setData(PROGRESS_KEY, String.valueOf(progress));
                 }
             }
+        }
+    }
+
+    private int parseProgress(String raw) {
+        if (raw == null) {
+            return 0;
+        }
+
+        try {
+            return Integer.parseInt(raw);
+        } catch (NumberFormatException ex) {
+            return 0;
         }
     }
 
