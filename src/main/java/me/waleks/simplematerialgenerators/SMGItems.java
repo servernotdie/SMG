@@ -12,17 +12,17 @@ public final class SMGItems {
 
     public static final ItemGroup SMG_ITEM_CATEGORY = new ItemGroup(
         new NamespacedKey(SimpleMaterialGenerators.getInstance(), "simplematerialgenerators"),
-        new CustomItemStack(Material.SMOOTH_STONE, "&9简易材料生成器")
+        new CustomItemStack(Material.SMOOTH_STONE, "&9Máy tạo vật liệu đơn giản")
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_MULTIBLOCK = new SlimefunItemStack(
         "SMG_GENERATOR_MULTIBLOCK",
         Material.BEDROCK,
-        "&9材料生成器 - 多方块结构",
+        "&9Máy tạo vật liệu - Cấu trúc đa khối",
         "",
-        "&d该附属中的所有材料生成器",
-        "&d都只需要像这样摆放",
-        "&a在上方放置一个箱子即可"
+        "&dTất cả máy tạo vật liệu trong addon này",
+        "&dđều chỉ cần đặt như thế này",
+        "&aĐặt một cái rương phía trên là được"
     );
 	
 	/*	Template for adding more generator items
@@ -30,171 +30,171 @@ public final class SMGItems {
 		"SMG_GENERATOR_",
 		Material.,
 		"& generator",
-		"&6速度: &e t",
+		"&6Tốc độ: &e t",
 		"",
-		"&9&o简易材料生成器"
+		"&9&oMáy tạo vật liệu đơn giản"
 	);
 	*/
 
     public static final SlimefunItemStack SMG_GENERATOR_COBBLESTONE = new SlimefunItemStack(
         "SMG_GENERATOR_COBBLESTONE",
         Material.COBBLESTONE,
-        "&7圆石生成器",
-        "&6速度: &e4 t",
+        "&7Máy tạo đá cuội",
+        "&6Tốc độ: &e4 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_STONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_STONE_BROKEN",
         Material.STONE,
-        "&7圆石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Máy tạo đá cuội &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_STONE = new SlimefunItemStack(
         "SMG_GENERATOR_STONE",
         Material.STONE,
-        "&7石头生成器",
-        "&6速度: &e8 t",
+        "&7Máy tạo đá",
+        "&6Tốc độ: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SMOOTH_STONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_SMOOTH_STONE_BROKEN",
         Material.SMOOTH_STONE,
-        "&7平滑石头生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Máy tạo đá nhẵn &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SMOOTH_STONE = new SlimefunItemStack(
         "SMG_GENERATOR_SMOOTH_STONE",
         Material.SMOOTH_STONE,
-        "&7平滑石头生成器",
-        "&6速度: &e12 t",
+        "&7Máy tạo đá nhẵn",
+        "&6Tốc độ: &e12 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GRAVEL_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_GRAVEL_BROKEN",
         Material.GRAVEL,
-        "&7沙砾生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&7Máy tạo sỏi &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GRAVEL = new SlimefunItemStack(
         "SMG_GENERATOR_GRAVEL",
         Material.ANDESITE,
-        "&7沙砾生成器",
-        "&6速度: &e6 t",
+        "&7Máy tạo sỏi",
+        "&6Tốc độ: &e6 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SAND_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_SAND_BROKEN",
         Material.SAND,
-        "&e沙子生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&eMáy tạo cát &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SAND = new SlimefunItemStack(
         "SMG_GENERATOR_SAND",
         Material.SANDSTONE,
-        "&e沙子生成器",
-        "&6速度: &e8 t",
+        "&eMáy tạo cát",
+        "&6Tốc độ: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_GLASS = new SlimefunItemStack(
         "SMG_GENERATOR_GLASS",
         Material.GLASS,
-        "&f玻璃生成器",
-        "&6速度: &e12 t",
+        "&fMáy tạo thủy tinh",
+        "&6Tốc độ: &e12 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_NETHERRACK = new SlimefunItemStack(
         "SMG_GENERATOR_NETHERRACK",
         Material.NETHERRACK,
-        "&c下界岩生成器",
-        "&6速度: &e6 t",
+        "&cMáy tạo đá địa ngục",
+        "&6Tốc độ: &e6 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_SOUL_SAND = new SlimefunItemStack(
         "SMG_GENERATOR_SOUL_SAND",
         Material.SOUL_SAND,
-        "&8灵魂沙生成器",
-        "&6速度: &e8 t",
+        "&8Máy tạo cát linh hồn",
+        "&6Tốc độ: &e8 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE_BADLY_FORMED = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE_BADLY_FORMED",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器 &8(错误形式)",
-        "&8我得重新...",
+        "&cMáy tạo redstone &8(Sai hình dạng)",
+        "&8Tôi phải làm lại...",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE_BROKEN",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&cMáy tạo redstone &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_REDSTONE = new SlimefunItemStack(
         "SMG_GENERATOR_REDSTONE",
         Material.REDSTONE_BLOCK,
-        "&c红石生成器",
-        "&6速度: &e24 t",
+        "&cMáy tạo redstone",
+        "&6Tốc độ: &e24 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN_BADLY_FORMED = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN_BADLY_FORMED",
         Material.OBSIDIAN,
-        "&5黑曜石生成器 &8(错误形式)",
-        "&8我得重新...",
+        "&5Máy tạo obsidian &8(Sai hình dạng)",
+        "&8Tôi phải làm lại...",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN_BROKEN = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN_BROKEN",
         Material.OBSIDIAN,
-        "&5黑曜石生成器 &8(已损坏)",
-        "&8需要进行修复",
+        "&5Máy tạo obsidian &8(Đã hỏng)",
+        "&8Cần sửa chữa",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 
     public static final SlimefunItemStack SMG_GENERATOR_OBSIDIAN = new SlimefunItemStack(
         "SMG_GENERATOR_OBSIDIAN",
         Material.OBSIDIAN,
-        "&5黑曜石生成器",
-        "&6速度: &e128 t",
+        "&5Máy tạo obsidian",
+        "&6Tốc độ: &e128 t",
         "",
-        "&9&o简易材料生成器"
+        "&9&oMáy tạo vật liệu đơn giản"
     );
 }

@@ -18,11 +18,20 @@ public class SimpleMaterialGenerators extends JavaPlugin implements SlimefunAddo
 
         Config cfg = new Config(this);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build ")) {
-            new GuizhanBuildsUpdater(this, getFile(), "SlimefunGuguProject", "SMG", "master", false).start();
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build ") && !isFolia()) {
+            GuizhanBuildsUpdater.start(this, getFile(), "SlimefunGuguProject", "SMG", "master");
         }
 
         SMGItemSetup.setup(this);
+    }
+
+    private static boolean isFolia() {
+        try {
+            Class.forName("io.papermc.paper.threadedregions.RegionizedServer");
+            return true;
+        } catch (ClassNotFoundException ex) {
+            return false;
+        }
     }
 
     @Override
